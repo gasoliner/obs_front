@@ -8,6 +8,7 @@
         window.scrollTo(0, 1);
     }
 </script>
+<script type="text/javascript" src="/ui/custom.js"></script>
 <!-- Custom Theme files -->
 <link href="/ui/mymodel/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <!-- shop css -->

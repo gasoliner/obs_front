@@ -73,6 +73,7 @@
                                     <th>订单创建时间</th>
                                     <th>订单状态</th>
                                     <th>备注</th>
+                                    <th>操作</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,6 +91,8 @@
                                         <td class="invert">${order.state}</td>
 
                                         <td class="invert">${order.var}</td>
+
+                                        <td class="invert">${order.voAction}</td>
                                     </tr>
                                 </c:forEach>
                             </tbody>

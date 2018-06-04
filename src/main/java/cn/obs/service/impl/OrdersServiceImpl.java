@@ -66,6 +66,11 @@ public class OrdersServiceImpl implements OrdersService {
             VoOrders voOrders = new VoOrders(orders);
             voOrders.setVoCid("");
             voOrders.setVoPublish(TimeUtils.dateToString(voOrders.getTime()));
+            if ("已发货".equals(voOrders.getState())) {
+                voOrders.setVoAction("<button style=\"width: auto\" id=\"btn-login\" " + "onclick=\"receiveConfirmed('" + voOrders.getOid() + "')\"" +" class=\"btn btn-info\">\n" +
+                        "                                        <i class=\"icon-hand-right\"></i>  确认收货\n" +
+                        "                                    </button>\n");
+            }
             list1.add(voOrders);
         }
         return list1;

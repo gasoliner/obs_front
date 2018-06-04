@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -39,6 +40,19 @@ public class OrderController {
         List<VoOrders> list1 = ordersService.vo(list);
         request.setAttribute("order", list1.get(0));
         return "order_detail";
+    }
+
+    @RequestMapping("/receiveConfirmed/{id}")
+    @ResponseBody
+    public void received(@PathVariable Integer id) {
+        Orders orders = new Orders();
+        orders.setOid(id);
+        orders.setState("已收货");
+        try {
+            ordersService.update(orders);
+        } catch (Exception e) {
+        }
+        return;
     }
 
 

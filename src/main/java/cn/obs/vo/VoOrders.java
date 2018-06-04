@@ -13,6 +13,8 @@ public class VoOrders extends Orders {
 
     private String voCid;
 
+    private String voAction;
+
     public VoOrders(Orders orders) {
         this.setOid(orders.getOid());
         this.setName(orders.getName());
@@ -24,6 +26,14 @@ public class VoOrders extends Orders {
     }
 
     public VoOrders() {}
+
+    public String getVoAction() {
+        return voAction;
+    }
+
+    public void setVoAction(String voAction) {
+        this.voAction = voAction;
+    }
 
     public String getVoPublish() {
         return voPublish;

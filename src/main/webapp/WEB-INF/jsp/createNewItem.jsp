@@ -60,7 +60,7 @@
             <h3 class="shopf-sear-headits-sear-head">
                 <span>author</span> in focus</h3>
             <form action="/shoppingCart/add" method="post">
-                <input type="hidden" name="id" value=""${id}>
+                <input type="hidden" name="id" value="${id}">
                 <h3>图书名称：</h3><input type="search" readonly="readonly" value="${bookname}" name="bookname" required="">
                 <div>&nbsp;</div>
                 <h3>图书价格：</h3><input type="search" readonly="readonly" value="${price}" name="price" required="">

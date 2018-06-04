@@ -269,3 +269,9 @@ function logout() {
         window.location.href = "/UI/sign";
     })
 }
+
+function receiveConfirmed(id) {
+    $.post("/order/receiveConfirmed/" + id,null,function (res) {
+        window.location.href = "/order/ui";
+    })
+}
